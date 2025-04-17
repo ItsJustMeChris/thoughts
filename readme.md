@@ -1,5 +1,3 @@
-# thoughts
-
 sometimes i think and maybe it can make you think
 
 thoughts:
