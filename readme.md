@@ -7,3 +7,5 @@ sometimes i think and maybe it can make you think
     - [you can just do stuff](/doing/you-can-just-do-stuff.md)
   - [on reverse engineering](/reverse-engineering/)
     - [self-decryption-macos](/reverse-engineering/self-decryption-macos.md)
+    - [return-oriented-programming](/reverse-engineering/return-oriented-programming.md)
+    - [symbol-rebinding](/reverse-engineering/symbol-rebinding.md)
