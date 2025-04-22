@@ -6,13 +6,13 @@ For this example, we'll be working with a very basic application that returns th
 
 Here's the code we're going to be using to test.
 
-![](/reverse-engineering/symbol-rebinding/img/5349c66e-8138-4a16-834a-7c7b12798c27.png align="center")
+![Test application output](symbol-rebinding/img/5349c66e-8138-4a16-834a-7c7b12798c27.png)
 
 To get a deeper look into the program we're going to also be using IDA to assist in reverse engineering the function stubs.
 
 Here's the assembly representation of the **mach\_absolute\_time** function stub, as you can see it's simply a wrapper method around a function called from a function pointer (**\_mach\_absolute\_time\_ptr**), this is our target.
 
-![](/reverse-engineering/symbol-rebinding/img/7c0a8735-2f35-4edf-8d64-b2d80657c94d.png align="center")
+![mach_absolute_time stub](symbol-rebinding/img/7c0a8735-2f35-4edf-8d64-b2d80657c94d.png)
 
   
 Taking note of the ***mach*absolute\_time\_ptr** address (**0x4000**) we'll create a small dylib to perform memory manipulation inside our demonstration process.
@@ -21,7 +21,7 @@ Taking note of the ***mach*absolute\_time\_ptr** address (**0x4000**) we'll crea
 
 I'll be using my OSX memory manipulation library "[Mocha](https://github.com/ItsJustMeChris/m0ch4)" to simplify the code required here.
 
-![](/reverse-engineering/symbol-rebinding/img/eaac1028-a6a3-4db1-96bd-144e3ed707e8.png align="center")
+![Mocha hook code](symbol-rebinding/img/eaac1028-a6a3-4db1-96bd-144e3ed707e8.png)
 
 With the code seen above, we're able to replace the **mach\_absolute\_time** function stub, allowing us to return 1337 from it, this is seen from the continuous loop output.
 
