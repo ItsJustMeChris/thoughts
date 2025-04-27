@@ -10,3 +10,5 @@ sometimes i think and maybe it can make you think
     - [self-decryption-macos](/reverse-engineering/self-decryption-macos.md)
     - [return-oriented-programming](/reverse-engineering/return-oriented-programming.md)
     - [symbol-rebinding](/reverse-engineering/symbol-rebinding.md)
+  - [on life](/life/)
+    - [time and memories](/life/time-and-memories.md)
